@@ -9,13 +9,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
-public class MovieServiceImpl{
-    @Autowired
-    private MovieService movieService;
+@Service
+public class MovieServiceImpl implements MovieService{
+
     @Autowired
     private MovieRepo movieRepo;
 
+    @Override
     public List<Movie> getAllMovies(){
         return movieRepo.findAll();
     }
