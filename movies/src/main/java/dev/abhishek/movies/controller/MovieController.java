@@ -23,3 +23,4 @@ public class MovieController {
         return new ResponseEntity<List<Movie>>(movieService.getAllMovies(), HttpStatus.OK);
     }
 }
+
